@@ -164,21 +164,19 @@ LangGraph版本： 1.0.5
 OpenAI版本： 2.15.0
 ```
 
-> **注意：**LangChain 和 LangGraph 必须安装**1.0.0以后**的版本，1.0.0以前的版本与1.0.0以后的版本不兼容，会对学习产生比较大的影响！！！
+> **注意：** LangChain 和 LangGraph 必须安装**1.0.0以后**的版本，1.0.0以前的版本与1.0.0以后的版本不兼容，会对学习产生比较大的影响！！！
 
 **步骤3：配置API密钥**
 
-我们的案例需要调用大模型，可以使用deepseek、qwen或者chatgpt模型等
+我们的案例需要调用大模型，可以通过官网购买deepseek、qwen或者chatgpt等模型服务提供商的服务以获取api key。要**特别注意**，密钥只显示一次，请妥善保存，最好不要泄露给别人。
 
-deepseek官网：https://platform.deepseek.com/usage
+| 服务商 | 官网 |
+|--------|------|
+| **DeepSeek** | https://platform.deepseek.com/usage |
+| **通义千问（Qwen）** | https://bailian.console.aliyun.com/ |
+| **ChatGPT（OpenAI）** | https://chatgpt.com/ |
 
-qwen官网：https://bailian.console.aliyun.com/
-
-chatgpt官网：https://chatgpt.com/
-
-通过模型的官网获取api，（注意：密钥只显示一次，保存好，不要泄露给别人）
-
-> 本教程选择的是deepseek官网的api，可以根据每个人的不同选择不同的底座模型
+> 本教程选择的是deepseek官网的api，可以根据个人情况选择不同的底座模型
 
 在项目文件夹（easy-langent）中新建一个文件，**命名为“.env”（注意前面有个点）**
 
@@ -204,7 +202,7 @@ API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 
 ### 1.4.1 LangChain案例：简单文本生成
 
-功能：调用OpenAI模型，生成一段“AI学习建议”。
+> 功能：调用OpenAI模型，生成一段“AI学习建议”。
 
 ```python
 # 1. 导入模块
@@ -262,7 +260,7 @@ print(response.content)
 
 ### 1.4.2 LangGraph案例：基础工作流执行
 
-功能：实现一个简单的“两步工作流”——第一步生成学习建议，第二步对建议进行精简。
+> 功能：实现一个简单的“两步工作流”——第一步生成学习建议，第二步对建议进行精简。
 
 ```python
 # 1. 导入需要的模块
