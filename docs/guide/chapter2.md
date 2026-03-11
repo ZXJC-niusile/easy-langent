@@ -186,13 +186,13 @@ Hugging Face模型回复：
 
 看到了吧？不管是OpenAI还是Hugging Face的模型，调用逻辑都是“初始化模型→构造输入→invoke()调用→输出结果”，这就是统一接口的好处。后续开发中，你可以根据项目需求（比如成本、隐私要求）灵活切换模型，不用大幅修改代码。
 
-## 2.2提示词模板（PromptTemplate）：让提示更规范、可复用
+## 2.2 提示词模板（PromptTemplate）：让提示更规范、可复用
 
 为什么需要提示词模板？比如你想做一个“学习建议生成器”，需要给不同角色（高校学生、程序员、职场人）生成建议。如果每次都写完整的提示词，不仅麻烦，还容易出错（比如漏写关键信息）。
 
 PromptTemplate就是帮我们把“固定的提示文本”和“动态的参数”分离开，让提示词更规范、可复用。
 
-### 2.2.1提示词模板基础用法：标准化提示与动态参数
+### 2.2.1 提示词模板基础用法：标准化提示与动态参数
 
 核心逻辑：定义一个包含“动态参数”的模板，调用时传入具体参数，自动生成完整的提示词。我们用“学习建议生成器”案例演示：
 
@@ -201,7 +201,7 @@ PromptTemplate就是帮我们把“固定的提示文本”和“动态的参数
 from langchain_core.prompts import PromptTemplate
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-import os 
+import os
 
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
@@ -279,7 +279,7 @@ print(result.content)
 from langchain_core.prompts import FewShotPromptTemplate, PromptTemplate
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-import os 
+import os
 
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
@@ -345,7 +345,7 @@ print(result.content)
 少样本提示词：
 
 学科：Python编程
-学习方法：核心目标：掌握基础语法和常用库；学习步骤：1. 学习变量、函数等基础语法 2. 实操小项目（如计算器） 3. 学习Pandas、Matplotlib库；注意事项：多动手实操，遇到错误及时调试。   
+学习方法：核心目标：掌握基础语法和常用库；学习步骤：1. 学习变量、函数等基础语法 2. 实操小项目（如计算器） 3. 学习Pandas、Matplotlib库；注意事项：多动手实操，遇到错误及时调试。
 
 
 
@@ -357,7 +357,7 @@ print(result.content)
 学习方法：
 
 生成的LangChain学习方法：
-学科：LangChain  
+学科：LangChain
 学习方法：
 **核心目标**：掌握LangChain框架的核心概念与组件，能够构建基于大语言模型的应用。
 **学习步骤**：
@@ -506,7 +506,7 @@ print(result_hard.content)
 
 ### 2.3.2 输出解析层实践案例
 
-#### 2.3.2.1案例1：StrOutputParser
+#### 2.3.2.1 案例1：StrOutputParser
 
 适用场景
 
