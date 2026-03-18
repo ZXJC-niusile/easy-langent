@@ -14,7 +14,6 @@
 ## 1.1 为什么需要LangChain和LangGraph
 
 在正式开始前，先跟大家确认下前置知识——不需要你是Python大神，只要能看懂基础的变量、函数，会用终端输入简单命令就行；对大模型有个模糊的概念（比如知道LLM是大语言模型）就足够了，不用深入了解原理。如果这些基础你都具备，那我们可以直接出发；如果有些遗忘也没关系，遇到相关知识点可以去搜索相关的资料，帮你回忆起来。
-在正式开始前，先跟大家确认下前置知识——不需要你是Python大神，只要能看懂基础的变量、函数，会用终端输入简单命令就行；对大模型有个模糊的概念（比如知道LLM是大语言模型）就足够了，不用深入了解原理。如果这些基础你都具备，那我们可以直接出发；如果有些遗忘也没关系，遇到相关知识点可以去搜索相关的资料，帮你回忆起来。
 
 我们先从一个常见的开发场景说起：假设你想做一个“智能论文助手”，功能很简单，就是帮用户总结论文内容、解答论文里的疑问。如果现在没有任何框架，全靠自己写代码，你会发现要解决一堆麻烦事。
 
@@ -154,12 +153,13 @@ pip install python-dotenv  # 用于管理环境变量（存储API密钥）
 
 ```python
 import langchain
-from  langgraph import version
+from langgraph import version
 import openai
 from dotenv import load_dotenv
 load_dotenv()
 ```
-运行结果
+
+**运行结果：**
 ```
 print("LangChain版本：", langchain.__version__)
 print("LangGraph版本：", version.__version__)
@@ -181,18 +181,22 @@ print("OpenAI版本：", openai.__version__)
 
 > 本教程选择的是deepseek官网的api，可以根据个人情况选择不同的底座模型
 
-在项目文件夹（easy-langent）中新建一个文件，**命名为“.env”（注意前面有个点）**
+在项目文件夹（easy-langent）中新建一个文件，**命名为".env"**（注意前面有个点）
+
+**步骤1：编辑.env文件**
 
 用编辑器打开`.env文件`，写入以下内容（替换成你的API密钥）：
 
-```python
-# 1. 在项目文件夹（easy-langent）中新建一个文件，命名为".env"（注意前面有个点）
-# 2. 用编辑器打开.env文件，写入以下内容（替换成你的API密钥）：
-API_KEY="xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-BASE_URL="xxxxxx"
+```env
+API_KEY=你的API密钥
+BASE_URL=https://api.deepseek.com
+```
 
-# 3. 调用环境变量
+**步骤2：在Python代码中调用环境变量**
+
+```python
 from dotenv import load_dotenv
+import os
 load_dotenv()
 API_KEY = os.getenv("API_KEY")
 BASE_URL = os.getenv("BASE_URL")  # API地址，使用你的模型对应的地址（如DeepSeek: https://api.deepseek.com）
@@ -234,7 +238,7 @@ if not API_KEY:
 llm = ChatOpenAI(
     api_key=API_KEY,
     base_url=BASE_URL,
-    model="deepseek-chat",  #注意修改这里的模型名称！！！！ 后面章节不再继续说明
+    model="deepseek-chat",  # 注意：根据你使用的模型修改名称！！！！ 后面章节不再继续说明
     temperature=0.3
 )
 
@@ -294,7 +298,7 @@ if not API_KEY:
 llm = ChatOpenAI(
     api_key=API_KEY,
     base_url=BASE_URL,
-    model="deepseek-chat", #注意修改这里的模型名称！！！！ 后面章节不再继续说明
+    model="deepseek-chat", # 注意：根据你使用的模型修改名称！！！！ 后面章节不再继续说明
     temperature=0.3
 )
 

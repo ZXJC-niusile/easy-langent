@@ -63,7 +63,7 @@
 | [第九章 Agent Skills与lang框架开发与应用](./docs/guide/chapter9.md) | Skills 扩展 | 🚧    |
 | [第十章 Agent实战：手搓小龙虾（轻量级）](./docs/guide/chapter10.md) | 基于lang框架动手开发openclaw项目 | 🚧    |
 | [结语](./docs/guide/结语.md)        | 项目总结与展望   | ✅    |
-| <strong>相关agent项目 |  |  |
+| <strong>相关agent项目</strong> |  |  |
 | [狼人杀（上帝视角）](./project/werewolfGameAi/README.md) | 基于langgraph开发 | ✅    |
 | [智能知识库问答](./project/AgenticRag/README.md) | 基于langchain开发 | ✅    |
 | [MCPChat](./project/MCPChat/README.md) | 基于langchain开发 | ✅    |
