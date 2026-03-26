@@ -208,7 +208,7 @@ print("OpenAI版本：", openai.__version__)
 
 **步骤3：配置API密钥**
 
-我们的案例需要调用大模型，可以通过官网购买deepseek、qwen或者chatgpt等模型服务提供商的服务以获取api key，也可以使用[硅基流动](https://cloud.siliconflow.cn/i/dbb2IJTv)的云端模型服务。**特别注意**，api key请妥善保存，最好不要泄露给别人。
+我们的案例需要调用大模型，可以通过官网购买deepseek、qwen或者chatgpt等模型服务提供商的服务以获取api key，也可以使用硅基流动的云端模型服务。**特别注意**，api key请妥善保存，最好不要泄露给别人。
 
 | 服务商                 | 官网                                        |
 | ------------------- | ----------------------------------------- |
@@ -217,8 +217,6 @@ print("OpenAI版本：", openai.__version__)
 | **ChatGPT（OpenAI）** | <https://chatgpt.com/>                    |
 | **智谱 AI（GLM）**      | <https://bigmodel.cn/>                    |
 | **硅基流动**            | <https://cloud.siliconflow.cn/> |
-
-> 点击[硅基流动](https://cloud.siliconflow.cn/i/dbb2IJTv)注册账号，获取api key，新用户可领取 16 元「认证奖励券」，硅基流动的模型也很丰富，也比较便宜，适合初学者
 
 > 本教程选择的是deepseek官网的api，可以根据个人情况选择不同的底座模型
 
