@@ -460,7 +460,7 @@ print(result.content)
 
 LangChain提供ExampleSelector组件，能根据输入的动态参数（如主题难度、输入长度）筛选最相关的示例，减少提示词体积，提升模型响应效率。以下是“按主题难度匹配示例”的工程化案例：
 运行下面脚本的时候，需要创建一个名为 `learning_method_examples.json` 的文件，内容如下：
-```
+```json
 [
 {"subject": "Python编程（入门）", "difficulty": "easy", "method": "核心目标：掌握基础语法；学习步骤：1.变量与数据类型 2.条件语句；注意事项：边学边练"},
 {"subject": "Python编程（进阶）", "difficulty": "hard", "method": "核心目标：掌握面向对象与库开发；学习步骤：1.类与对象 2.模块开发；注意事项：参与开源项目"},
